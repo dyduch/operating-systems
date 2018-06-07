@@ -1,0 +1,3 @@
+Filtering with filter of size 25, with usage of 8 threads time:	
+
+REAL: 0.520285s	USER: 3.000771s	SYSTEM: 0.003702s

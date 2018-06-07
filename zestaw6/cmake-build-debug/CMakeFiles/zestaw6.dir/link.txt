@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/zestaw6.dir/zad1/server.c.o CMakeFiles/zestaw6.dir/zad1/client.c.o CMakeFiles/zestaw6.dir/zad2/server.c.o CMakeFiles/zestaw6.dir/zad2/client.c.o  -o zestaw6 

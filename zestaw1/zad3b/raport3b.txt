@@ -1,0 +1,195 @@
+OPTLVL = -O0 
+Static Libraries: 
+Static Array of size: 100000, blockSize: 500, allocation time:	
+REAL: 0.561551s	USER: 0.528809s	SYSTEM: 0.031927s
+Dynamic Array of size: 100000, blockSize: 500, allocation time:	
+REAL: 0.457416s	USER: 0.434038s	SYSTEM: 0.022585s
+Adding 10000 elements to static array of size: 100000, blockSize: 500, time:	
+REAL: 0.056557s	USER: 0.056485s	SYSTEM: 0.000000s
+Removing 10000 elements from static array of size: 100000, blockSize: 500, time:	
+REAL: 0.011063s	USER: 0.011045s	SYSTEM: 0.000004s
+Removing 10000 elements from dynamic array of size: 100000, blockSize: 500, time:	
+REAL: 0.000439s	USER: 0.000414s	SYSTEM: 0.000024s
+Removing and adding an element 10000 times in static array of size: 100000, blockSize: 500, time:	
+REAL: 0.065075s	USER: 0.063987s	SYSTEM: 0.001001s
+Removing and adding an element 10000 times in dynamic array of size: 100000, blockSize: 500, time:	
+REAL: 0.045127s	USER: 0.045069s	SYSTEM: 0.000006s
+Searching element in static array of size: 100000, blockSize: 500, time:	
+REAL: 0.107878s	USER: 0.107726s	SYSTEM: 0.000000s
+Searching element in dynamic array of size: 100000, blockSize: 500, time:	
+REAL: 0.114102s	USER: 0.113921s	SYSTEM: 0.000012s
+Shared Libraries: 
+Static Array of size: 100000, blockSize: 500, allocation time:	
+REAL: 0.558471s	USER: 0.526041s	SYSTEM: 0.031669s
+Dynamic Array of size: 100000, blockSize: 500, allocation time:	
+REAL: 0.447206s	USER: 0.425657s	SYSTEM: 0.020951s
+Adding 10000 elements to static array of size: 100000, blockSize: 500, time:	
+REAL: 0.055127s	USER: 0.049013s	SYSTEM: 0.006001s
+Removing 10000 elements from static array of size: 100000, blockSize: 500, time:	
+REAL: 0.010967s	USER: 0.010953s	SYSTEM: 0.000000s
+Removing 10000 elements from dynamic array of size: 100000, blockSize: 500, time:	
+REAL: 0.000459s	USER: 0.000442s	SYSTEM: 0.000017s
+Removing and adding an element 10000 times in static array of size: 100000, blockSize: 500, time:	
+REAL: 0.065355s	USER: 0.065268s	SYSTEM: 0.000000s
+Removing and adding an element 10000 times in dynamic array of size: 100000, blockSize: 500, time:	
+REAL: 0.043164s	USER: 0.042088s	SYSTEM: 0.001011s
+Searching element in static array of size: 100000, blockSize: 500, time:	
+REAL: 0.108342s	USER: 0.108181s	SYSTEM: 0.000010s
+Searching element in dynamic array of size: 100000, blockSize: 500, time:	
+REAL: 0.115196s	USER: 0.115029s	SYSTEM: 0.000014s
+OPTLVL = -O1 
+Static Libraries: 
+Static Array of size: 100000, blockSize: 500, allocation time:	
+REAL: 0.487397s	USER: 0.450806s	SYSTEM: 0.035920s
+Dynamic Array of size: 100000, blockSize: 500, allocation time:	
+REAL: 0.426030s	USER: 0.407460s	SYSTEM: 0.017993s
+Adding 10000 elements to static array of size: 100000, blockSize: 500, time:	
+REAL: 0.047872s	USER: 0.045824s	SYSTEM: 0.001988s
+Removing 10000 elements from static array of size: 100000, blockSize: 500, time:	
+REAL: 0.002945s	USER: 0.002939s	SYSTEM: 0.000000s
+Removing 10000 elements from dynamic array of size: 100000, blockSize: 500, time:	
+REAL: 0.000509s	USER: 0.000505s	SYSTEM: 0.000000s
+Removing and adding an element 10000 times in static array of size: 100000, blockSize: 500, time:	
+REAL: 0.048279s	USER: 0.046268s	SYSTEM: 0.001948s
+Removing and adding an element 10000 times in dynamic array of size: 100000, blockSize: 500, time:	
+REAL: 0.041550s	USER: 0.040537s	SYSTEM: 0.000963s
+Searching element in static array of size: 100000, blockSize: 500, time:	
+REAL: 0.026536s	USER: 0.026468s	SYSTEM: 0.000028s
+Searching element in dynamic array of size: 100000, blockSize: 500, time:	
+REAL: 0.027481s	USER: 0.027441s	SYSTEM: 0.000000s
+Shared Libraries: 
+Static Array of size: 100000, blockSize: 500, allocation time:	
+REAL: 0.480453s	USER: 0.447766s	SYSTEM: 0.032010s
+Dynamic Array of size: 100000, blockSize: 500, allocation time:	
+REAL: 0.429062s	USER: 0.399502s	SYSTEM: 0.028995s
+Adding 10000 elements to static array of size: 100000, blockSize: 500, time:	
+REAL: 0.048530s	USER: 0.043502s	SYSTEM: 0.004965s
+Removing 10000 elements from static array of size: 100000, blockSize: 500, time:	
+REAL: 0.002888s	USER: 0.002882s	SYSTEM: 0.000000s
+Removing 10000 elements from dynamic array of size: 100000, blockSize: 500, time:	
+REAL: 0.000431s	USER: 0.000404s	SYSTEM: 0.000025s
+Removing and adding an element 10000 times in static array of size: 100000, blockSize: 500, time:	
+REAL: 0.047413s	USER: 0.047359s	SYSTEM: 0.000000s
+Removing and adding an element 10000 times in dynamic array of size: 100000, blockSize: 500, time:	
+REAL: 0.041616s	USER: 0.039597s	SYSTEM: 0.001974s
+Searching element in static array of size: 100000, blockSize: 500, time:	
+REAL: 0.026847s	USER: 0.026798s	SYSTEM: 0.000000s
+Searching element in dynamic array of size: 100000, blockSize: 500, time:	
+REAL: 0.027659s	USER: 0.027579s	SYSTEM: 0.000042s
+OPTLVL = -O2 
+Static Libraries: 
+Static Array of size: 100000, blockSize: 500, allocation time:	
+REAL: 0.459819s	USER: 0.425515s	SYSTEM: 0.033618s
+Dynamic Array of size: 100000, blockSize: 500, allocation time:	
+REAL: 0.461019s	USER: 0.438488s	SYSTEM: 0.021945s
+Adding 10000 elements to static array of size: 100000, blockSize: 500, time:	
+REAL: 0.045494s	USER: 0.043401s	SYSTEM: 0.002037s
+Removing 10000 elements from static array of size: 100000, blockSize: 500, time:	
+REAL: 0.002708s	USER: 0.002649s	SYSTEM: 0.000054s
+Removing 10000 elements from dynamic array of size: 100000, blockSize: 500, time:	
+REAL: 0.000444s	USER: 0.000440s	SYSTEM: 0.000000s
+Removing and adding an element 10000 times in static array of size: 100000, blockSize: 500, time:	
+REAL: 0.045710s	USER: 0.044592s	SYSTEM: 0.001056s
+Removing and adding an element 10000 times in dynamic array of size: 100000, blockSize: 500, time:	
+REAL: 0.045256s	USER: 0.043198s	SYSTEM: 0.002008s
+Searching element in static array of size: 100000, blockSize: 500, time:	
+REAL: 0.032406s	USER: 0.032323s	SYSTEM: 0.000036s
+Searching element in dynamic array of size: 100000, blockSize: 500, time:	
+REAL: 0.021941s	USER: 0.021906s	SYSTEM: 0.000000s
+Shared Libraries: 
+Static Array of size: 100000, blockSize: 500, allocation time:	
+REAL: 0.455956s	USER: 0.417747s	SYSTEM: 0.037569s
+Dynamic Array of size: 100000, blockSize: 500, allocation time:	
+REAL: 0.460648s	USER: 0.438098s	SYSTEM: 0.021969s
+Adding 10000 elements to static array of size: 100000, blockSize: 500, time:	
+REAL: 0.045789s	USER: 0.042747s	SYSTEM: 0.002979s
+Removing 10000 elements from static array of size: 100000, blockSize: 500, time:	
+REAL: 0.002882s	USER: 0.002876s	SYSTEM: 0.000000s
+Removing 10000 elements from dynamic array of size: 100000, blockSize: 500, time:	
+REAL: 0.000423s	USER: 0.000393s	SYSTEM: 0.000029s
+Removing and adding an element 10000 times in static array of size: 100000, blockSize: 500, time:	
+REAL: 0.045067s	USER: 0.045009s	SYSTEM: 0.000009s
+Removing and adding an element 10000 times in dynamic array of size: 100000, blockSize: 500, time:	
+REAL: 0.044721s	USER: 0.042688s	SYSTEM: 0.001983s
+Searching element in static array of size: 100000, blockSize: 500, time:	
+REAL: 0.032320s	USER: 0.032251s	SYSTEM: 0.000021s
+Searching element in dynamic array of size: 100000, blockSize: 500, time:	
+REAL: 0.022110s	USER: 0.022066s	SYSTEM: 0.000004s
+OPTLVL = -O3 
+Static Libraries: 
+Static Array of size: 100000, blockSize: 500, allocation time:	
+REAL: 0.438396s	USER: 0.404643s	SYSTEM: 0.033008s
+Dynamic Array of size: 100000, blockSize: 500, allocation time:	
+REAL: 0.424962s	USER: 0.404448s	SYSTEM: 0.019984s
+Adding 10000 elements to static array of size: 100000, blockSize: 500, time:	
+REAL: 0.044434s	USER: 0.042349s	SYSTEM: 0.002028s
+Removing 10000 elements from static array of size: 100000, blockSize: 500, time:	
+REAL: 0.003013s	USER: 0.003007s	SYSTEM: 0.000000s
+Removing 10000 elements from dynamic array of size: 100000, blockSize: 500, time:	
+REAL: 0.000425s	USER: 0.000398s	SYSTEM: 0.000026s
+Removing and adding an element 10000 times in static array of size: 100000, blockSize: 500, time:	
+REAL: 0.040270s	USER: 0.037208s	SYSTEM: 0.003017s
+Removing and adding an element 10000 times in dynamic array of size: 100000, blockSize: 500, time:	
+REAL: 0.040935s	USER: 0.040833s	SYSTEM: 0.000056s
+Searching element in static array of size: 100000, blockSize: 500, time:	
+REAL: 0.021775s	USER: 0.021739s	SYSTEM: 0.000000s
+Searching element in dynamic array of size: 100000, blockSize: 500, time:	
+REAL: 0.020959s	USER: 0.020926s	SYSTEM: 0.000000s
+Shared Libraries: 
+Static Array of size: 100000, blockSize: 500, allocation time:	
+REAL: 0.431837s	USER: 0.396584s	SYSTEM: 0.034637s
+Dynamic Array of size: 100000, blockSize: 500, allocation time:	
+REAL: 0.434293s	USER: 0.409743s	SYSTEM: 0.023943s
+Adding 10000 elements to static array of size: 100000, blockSize: 500, time:	
+REAL: 0.044486s	USER: 0.041461s	SYSTEM: 0.002964s
+Removing 10000 elements from static array of size: 100000, blockSize: 500, time:	
+REAL: 0.002706s	USER: 0.002651s	SYSTEM: 0.000051s
+Removing 10000 elements from dynamic array of size: 100000, blockSize: 500, time:	
+REAL: 0.000497s	USER: 0.000495s	SYSTEM: 0.000000s
+Removing and adding an element 10000 times in static array of size: 100000, blockSize: 500, time:	
+REAL: 0.040819s	USER: 0.040774s	SYSTEM: 0.000000s
+Removing and adding an element 10000 times in dynamic array of size: 100000, blockSize: 500, time:	
+REAL: 0.041506s	USER: 0.040490s	SYSTEM: 0.000968s
+Searching element in static array of size: 100000, blockSize: 500, time:	
+REAL: 0.022699s	USER: 0.022649s	SYSTEM: 0.000000s
+Searching element in dynamic array of size: 100000, blockSize: 500, time:	
+REAL: 0.020987s	USER: 0.020954s	SYSTEM: 0.000000s
+OPTLVL = -Os 
+Static Libraries: 
+Static Array of size: 100000, blockSize: 500, allocation time:	
+REAL: 0.815005s	USER: 0.780847s	SYSTEM: 0.032895s
+Dynamic Array of size: 100000, blockSize: 500, allocation time:	
+REAL: 0.782944s	USER: 0.754056s	SYSTEM: 0.027944s
+Adding 10000 elements to static array of size: 100000, blockSize: 500, time:	
+REAL: 0.080536s	USER: 0.074468s	SYSTEM: 0.005975s
+Removing 10000 elements from static array of size: 100000, blockSize: 500, time:	
+REAL: 0.003484s	USER: 0.003478s	SYSTEM: 0.000000s
+Removing 10000 elements from dynamic array of size: 100000, blockSize: 500, time:	
+REAL: 0.000460s	USER: 0.000446s	SYSTEM: 0.000012s
+Removing and adding an element 10000 times in static array of size: 100000, blockSize: 500, time:	
+REAL: 0.081679s	USER: 0.080611s	SYSTEM: 0.000986s
+Removing and adding an element 10000 times in dynamic array of size: 100000, blockSize: 500, time:	
+REAL: 0.076968s	USER: 0.075894s	SYSTEM: 0.000998s
+Searching element in static array of size: 100000, blockSize: 500, time:	
+REAL: 0.023695s	USER: 0.023634s	SYSTEM: 0.000020s
+Searching element in dynamic array of size: 100000, blockSize: 500, time:	
+REAL: 0.031265s	USER: 0.031214s	SYSTEM: 0.000005s
+Shared Libraries: 
+Static Array of size: 100000, blockSize: 500, allocation time:	
+REAL: 0.817067s	USER: 0.773474s	SYSTEM: 0.042555s
+Dynamic Array of size: 100000, blockSize: 500, allocation time:	
+REAL: 0.791623s	USER: 0.776652s	SYSTEM: 0.013984s
+Adding 10000 elements to static array of size: 100000, blockSize: 500, time:	
+REAL: 0.080134s	USER: 0.073022s	SYSTEM: 0.006997s
+Removing 10000 elements from static array of size: 100000, blockSize: 500, time:	
+REAL: 0.003636s	USER: 0.003628s	SYSTEM: 0.000000s
+Removing 10000 elements from dynamic array of size: 100000, blockSize: 500, time:	
+REAL: 0.000462s	USER: 0.000458s	SYSTEM: 0.000000s
+Removing and adding an element 10000 times in static array of size: 100000, blockSize: 500, time:	
+REAL: 0.080674s	USER: 0.077533s	SYSTEM: 0.003025s
+Removing and adding an element 10000 times in dynamic array of size: 100000, blockSize: 500, time:	
+REAL: 0.075555s	USER: 0.074463s	SYSTEM: 0.001014s
+Searching element in static array of size: 100000, blockSize: 500, time:	
+REAL: 0.023349s	USER: 0.023313s	SYSTEM: 0.000000s
+Searching element in dynamic array of size: 100000, blockSize: 500, time:	
+REAL: 0.030988s	USER: 0.030942s	SYSTEM: 0.000000s

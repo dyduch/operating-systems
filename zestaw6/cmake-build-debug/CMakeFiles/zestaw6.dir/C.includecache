@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/rudeu/Studies/sysopy/zestaw6/zad1/server.c
+stdio.h
+-
+stdlib.h
+-
+assert.h
+-
+string.h
+-
+errno.h
+-
+unistd.h
+-
+sys/ipc.h
+-
+sys/msg.h
+-
+ctype.h
+-
+time.h
+-
+signal.h
+-
+systemV.h
+/home/rudeu/Studies/sysopy/zestaw6/zad1/systemV.h
+
+/home/rudeu/Studies/sysopy/zestaw6/zad1/systemV.h
+

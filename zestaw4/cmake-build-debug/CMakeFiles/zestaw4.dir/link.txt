@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/zestaw4.dir/zad2/main.c.o  -o zestaw4 

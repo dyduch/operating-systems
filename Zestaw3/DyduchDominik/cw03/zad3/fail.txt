@@ -1,0 +1,4 @@
+ls -la
+pwd
+echo "elo"
+cat "54.txt"

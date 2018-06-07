@@ -1,0 +1,4 @@
+ls -l
+echo "siemano"
+who
+ps -aux

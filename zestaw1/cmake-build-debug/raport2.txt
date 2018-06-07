@@ -1,0 +1,28 @@
+
+REAL: 0.000307s	USER: 0.000282s	SYSTEM: 0.000024s
+Removing 4000 elements from dynamic array of size: 100000, blockSize: 900, time:	
+REAL: 0.000252s	USER: 0.000232s	SYSTEM: 0.000019s
+Removing 4000 elements from dynamic array of size: 100000, blockSize: 900, time:	
+REAL: 0.000233s	USER: 0.000220s	SYSTEM: 0.000012s
+Removing 4000 elements from dynamic array of size: 100000, blockSize: 900, time:	
+REAL: 7.584544s	USER: 0.000787s	SYSTEM: 0.000000s
+Removing 4000 elements from dynamic array of size: 100000, blockSize: 900, time:	Removing 4000 elements from dynamic array of size: 100000, blockSize: 900, time:	
+REAL: 0.000262s	USER: 0.000240s	SYSTEM: 0.000021s
+Removing 4000 elements from dynamic array of size: 100000, blockSize: 900, time:	
+REAL: 0.000251s	USER: 0.000229s	SYSTEM: 0.000021s
+Adding 1000 elements to dynamic array of size: 10000, blockSize: 900, time:	
+REAL: 0.009071s	USER: 0.009040s	SYSTEM: 0.000010s
+Adding 1000 elements to dynamic array of size: 10000, blockSize: 900, time:	
+REAL: 0.008021s	USER: 0.007996s	SYSTEM: 0.000000s
+Adding 1000 elements to dynamic array of size: 10000, blockSize: 900, time:	
+REAL: 0.008462s	USER: 0.007328s	SYSTEM: 0.001120s
+Adding 1000 elements to dynamic array of size: 10000, blockSize: 900, time:	
+REAL: 0.008712s	USER: 0.008464s	SYSTEM: 0.000226s
+Adding 1000 elements to dynamic array of size: 10000, blockSize: 900, time:	
+REAL: 0.008176s	USER: 0.007124s	SYSTEM: 0.001032s
+Adding 1000 elements to dynamic array of size: 10000, blockSize: 900, time:	
+REAL: 0.007871s	USER: 0.007860s	SYSTEM: 0.000000s
+Dynamic Array of size: 10000, blockSize: 900, allocation time:	
+REAL: 140396008097528.000000s	USER: 0.000000s	SYSTEM: 140396148833406.812500s
+Dynamic Array of size: 10000, blockSize: 900, allocation time:	
+REAL: 0.079750s	USER: 0.072604s	SYSTEM: 0.007026s

@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/zestaw1.dir/StaticArray.c.o CMakeFiles/zestaw1.dir/DynamicArray.c.o CMakeFiles/zestaw1.dir/zad3a/test.c.o  -o zestaw1 

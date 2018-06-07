@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/rudeu/Studies/sysopy/zestaw8/main.c
+stdio.h
+-
+pthread.h
+-
+stdlib.h
+-
+memory.h
+-
+math.h
+-
+sys/resource.h
+-
+sys/time.h
+-
+

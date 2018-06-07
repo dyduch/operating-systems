@@ -1,0 +1,24 @@
+jest proces i on chce zrobić potomny i potomny chce wysłać info do parenta że zrobił
+
+dzieko wysyła sygnał do parenta
+w parencie chcemy czekać aż sygnał przyjdzie
+
+1 opcja -> parent wukonujae pause
+PROBLEMY:
+	 pause czeka na wystąpienie dowolnego sygnału -> jakikolwiek inny zgo 	zastąpi -> możńa zastosować funkcje pozwalającą czekać na sygnały z określonego zbipru
+	po forku wyśle sygnał zanim parent wywoła pause - > w parencie sie nic nie stanie i będzie czekać na sygnał który nie nadejdzie
+
+można w parencie zrobić globalną i w handlerze wywołującym dziecko ustawić jej wartość (w handlerze np na 1 ustawimy)
+ALE
+może być tak że sygnał od dziecka przyjdzie po sprawdzeniu warunku w pętli a przed wywołaniem pause i znowu j/w
+
+można w whilu czekać aż sygnał przyjdzie ale to głupi pomysł
+
+możęmy przed całą pętlą maskę sygnałów, blokujący z odp. argumentami i przed pausem odblkowoąć
+
+sigsuspend is the thing !!!	
+
+ZAD2 - procesy potome wysyłają SIGUSR1/2 do macierzystego -> pamiętać że jak przyjdzie wiele sygnałów takich samych to zostanie zapamiętany tylko 1 ( sygnały sie mogą zgubić ) 
+
+NAPRAWIĆ CZAS PROCESORA!! -ZESTAW3
+

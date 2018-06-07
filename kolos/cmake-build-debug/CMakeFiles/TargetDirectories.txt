@@ -1,0 +1,3 @@
+/home/rudeu/Studies/sysopy/kolos/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/rudeu/Studies/sysopy/kolos/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/rudeu/Studies/sysopy/kolos/cmake-build-debug/CMakeFiles/kolos.dir

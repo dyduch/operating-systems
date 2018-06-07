@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/zestaw7.dir/zad2/barbershop.c.o CMakeFiles/zestaw7.dir/zad2/barber.c.o CMakeFiles/zestaw7.dir/zad2/client.c.o  -o zestaw7 

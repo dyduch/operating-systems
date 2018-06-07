@@ -1,0 +1,4 @@
+ps -aux | grep rudeu | tail -n 2
+cat ls.txt | grep option | head -n 1
+ls -l | awk '{print }'
+ls -l | awk '{print $2}'

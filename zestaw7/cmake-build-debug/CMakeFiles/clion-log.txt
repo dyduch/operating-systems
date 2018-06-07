@@ -1,0 +1,4 @@
+/home/rudeu/CLion/clion-2017.3.4/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/rudeu/Studies/sysopy/zestaw7
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/rudeu/Studies/sysopy/zestaw7/cmake-build-debug

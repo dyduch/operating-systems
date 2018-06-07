@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="zestaw6"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/rudeu/Studies/sysopy/zestaw6/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/rudeu/Studies/sysopy/zestaw6/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/rudeu/Studies/sysopy/zestaw6/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/rudeu/Studies/sysopy/zestaw6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/rudeu/Studies/sysopy/zestaw6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/rudeu/Studies/sysopy/zestaw6/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/rudeu/Studies/sysopy/zestaw6/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/rudeu/Studies/sysopy/zestaw6/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/rudeu/Studies/sysopy/zestaw6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/rudeu/Studies/sysopy/zestaw6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/rudeu/Studies/sysopy/zestaw6/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/rudeu/Studies/sysopy/zestaw6/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/rudeu/Studies/sysopy/zestaw6/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/rudeu/Studies/sysopy/zestaw6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/rudeu/Studies/sysopy/zestaw6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="zestaw6">
+				<Option output="/home/rudeu/Studies/sysopy/zestaw6/cmake-build-debug/zestaw6" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/rudeu/Studies/sysopy/zestaw6/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/rudeu/Studies/sysopy/zestaw6/cmake-build-debug/Makefile&quot;  VERBOSE=1 zestaw6"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/rudeu/Studies/sysopy/zestaw6/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/rudeu/Studies/sysopy/zestaw6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/rudeu/Studies/sysopy/zestaw6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="zestaw6/fast">
+				<Option output="/home/rudeu/Studies/sysopy/zestaw6/cmake-build-debug/zestaw6" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/rudeu/Studies/sysopy/zestaw6/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/rudeu/Studies/sysopy/zestaw6/cmake-build-debug/Makefile&quot;  VERBOSE=1 zestaw6/fast"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/rudeu/Studies/sysopy/zestaw6/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/rudeu/Studies/sysopy/zestaw6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/rudeu/Studies/sysopy/zestaw6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/rudeu/Studies/sysopy/zestaw6/zad1/client.c">
+			<Option target="zestaw6"/>
+		</Unit>
+		<Unit filename="/home/rudeu/Studies/sysopy/zestaw6/zad1/server.c">
+			<Option target="zestaw6"/>
+		</Unit>
+		<Unit filename="/home/rudeu/Studies/sysopy/zestaw6/zad1/systemV.h">
+			<Option target="zestaw6"/>
+		</Unit>
+		<Unit filename="/home/rudeu/Studies/sysopy/zestaw6/zad2/client.c">
+			<Option target="zestaw6"/>
+		</Unit>
+		<Unit filename="/home/rudeu/Studies/sysopy/zestaw6/zad2/posix.h">
+			<Option target="zestaw6"/>
+		</Unit>
+		<Unit filename="/home/rudeu/Studies/sysopy/zestaw6/zad2/server.c">
+			<Option target="zestaw6"/>
+		</Unit>
+		<Unit filename="/home/rudeu/Studies/sysopy/zestaw6/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

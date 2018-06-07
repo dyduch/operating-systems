@@ -1,0 +1,8 @@
+Dynamic Array of size: 100000, blockSize: 900, allocation time:	
+REAL: 0.814857s	USER: 0.770564s	SYSTEM: 0.041943s
+Dynamic Array of size: 1000000, blockSize: 900, allocation time:	
+REAL: 8.047721s	USER: 7.604140s	SYSTEM: 0.431849s
+Adding 10 elements to dynamic array of size: 100000, blockSize: 900, time:	
+REAL: 0.788898s	USER: 0.746869s	SYSTEM: 0.041008s
+Adding 50 elements to dynamic array of size: 100000, blockSize: 900, time:	
+REAL: 0.793953s	USER: 0.762946s	SYSTEM: 0.029960s

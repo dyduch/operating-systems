@@ -1,0 +1,4 @@
+pwd
+ls -la
+echo "siemano"
+who

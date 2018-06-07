@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/rudeu/Studies/sysopy/zestaw2/zad2/main.c
+dirent.h
+-
+stdio.h
+-
+stdlib.h
+-
+memory.h
+-
+sys/stat.h
+-
+time.h
+-
+getopt.h
+-
+ftw.h
+-
+unistd.h
+-
+wait.h
+-
+
