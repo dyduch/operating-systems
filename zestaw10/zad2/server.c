@@ -1,5 +1,5 @@
 //
-// Created by rudeu on 12.06.18.
+// Created by rudeu on 21.06.18.
 //
 
 
@@ -30,6 +30,15 @@ pthread_mutex_t clients_array_mutex;
 struct client clients_array[MAX_CLIENTS];
 
 void clean_up(){
+    struct msg msg;
+    msg.msg_type = END;
+    for (int i = 0; i < MAX_CLIENTS; ++i) {
+        if(clients_array[i].pings == 0)
+        {
+            sendto(clients_array[i].fd, &msg, sizeof(msg), 0, &clients_array[i].addr, clients_array[i].addr_size);
+        }
+    }
+    pthread_mutex_destroy(&clients_array_mutex);
     close(epolld);
     close(inet);
     close(local);
@@ -71,13 +80,13 @@ void add_client(struct epoll_event events) {
     pthread_mutex_unlock(&clients_array_mutex);
 }
 
-void close_connection(struct epoll_event events){
+void close_connection(struct epoll_event events) {
     pthread_mutex_lock(&clients_array_mutex);
     shutdown(events.data.fd, SHUT_RDWR);
     close(events.data.fd);
     for(int i=0; i<MAX_CLIENTS; i++)
     {
-        if(clients_array[i].pings >0 && events.data.fd == clients_array[i].fd)
+        if(clients_array[i].pings >=0 && events.data.fd == clients_array[i].fd)
         {
             clients_array[i].pings = -1;
             for(int j=0; j<MAX_LEN; j++) clients_array[i].name[j] = 0;
@@ -88,9 +97,11 @@ void close_connection(struct epoll_event events){
 
 
 
-void handle_response (struct epoll_event events){
+void handle_response (struct epoll_event events) {
     struct msg msg;
-    ssize_t quantity = read(events.data.fd, &msg, sizeof(msg));
+    struct sockaddr *addr = malloc(sizeof(struct sockaddr));
+    socklen_t addr_size = sizeof(struct sockaddr);
+    ssize_t quantity = recvfrom(events.data.fd, &msg, sizeof(msg), 0, addr, &addr_size);
     if (quantity == 0)
     {
         printf("Ending connection with client %d.\n", events.data.fd);
@@ -108,18 +119,22 @@ void handle_response (struct epoll_event events){
                     if(clients_array[i].pings >=0 && strcmp(msg.name, clients_array[i].name) == 0) // there is such client
                     {
                         pthread_mutex_unlock(&clients_array_mutex);
-                        write(events.data.fd, &msg, sizeof(msg)); //sending back START message
+                        sendto(events.data.fd, &msg, sizeof(msg), 0, &clients_array[i].addr, clients_array[i].addr_size); //sending back START message
                         close_connection(events);
                         return;
                     }
                 }
                 for(int i=0; i<MAX_CLIENTS; i++)
                 {
-                    if(clients_array[i].pings >=0 && events.data.fd == clients_array[i].fd)
+                    if(clients_array[i].pings == -1)
                     {
                         printf("Starting connection with client %d with name %s.\n", events.data.fd, msg.name);
                         fflush(stdout);
                         strcpy(clients_array[i].name, msg.name);
+                        clients_array[i].addr = *addr;
+                        clients_array[i].addr_size = addr_size;
+                        clients_array[i].fd = events.data.fd;
+                        clients_array[i].pings =0;
                         pthread_mutex_unlock(&clients_array_mutex);
                         return;
                     }
@@ -142,30 +157,20 @@ void handle_response (struct epoll_event events){
 }
 
 
-void *do_math(void *args)
-{
+void *do_math(void *args) {
     for (int i =0; i<MAX_CLIENTS; i++) clients_array[i].pings = -1;
     struct epoll_event events[MAX_EVENTS];
     while(1)
     {
         int counter = epoll_wait(epolld, events, MAX_EVENTS, -1); // waiting infinitely
-        for (int i=0; i<counter; i++)
+        for (int i=0; i<counter; i++) // there is no connection now
         {
-            if(events[i].data.fd == local || events[i].data.fd == inet)
-            {
-                if (events[i].data.fd == local) printf("Local client is waiting to be added.\n");
-                else if (events[i].data.fd == inet) printf("Inet client is waiting to be added.\n");
-                add_client(events[i]);
-            }
-            else
-            {
-                handle_response(events[i]);
-            }
+            handle_response(events[i]);
         }
     }
 }
 
-void *ping(void *args){
+void *ping(void *args) {
     sleep(3);
     while(1)
     {
@@ -178,7 +183,7 @@ void *ping(void *args){
             {
                 clients_array[i].pings =1;
                 msg.id =i;
-                write(clients_array[i].fd, &msg, sizeof(msg));
+                sendto(clients_array[i].fd, &msg, sizeof(msg), 0, &clients_array[i].addr, clients_array[i].addr_size);
             }
         }
         sleep(3); // waiting for all clients to response by decremeting their pings counter
@@ -219,18 +224,18 @@ void main_process_function(){
         msg.msg_request.operation = operation;
         msg.msg_request.val1 = val1;
         msg.msg_request.val2 = val2;
-        int infinity = 1;
+        int infinity =1;
         while(infinity) {
             pthread_mutex_lock(&clients_array_mutex);
             for (int i = 0; i < MAX_CLIENTS; i++)
             {
                 if (clients_array[i].pings == 0) {
-                    ssize_t quantity = write(clients_array[i].fd, &msg, sizeof(msg));
+                    ssize_t quantity = sendto(clients_array[i].fd, &msg, sizeof(msg), 0, &clients_array[i].addr, clients_array[i].addr_size);
                     if (quantity <= 0) {
-                        printf("Couldn't send msg to client %d.\n", clients_array[i].fd);
+                        printf("Couldn't send msg to client %s.\n", clients_array[i].name);
                         fflush(stdout);
                     } else {
-                        printf("Sending request.\n");
+                        printf("Sending request to client %s.\n", clients_array[i].name);
                         fflush(stdout);
                         infinity = 0;
                         break;
@@ -243,30 +248,27 @@ void main_process_function(){
 }
 
 
-int main(int argc, char **argv){
+
+int main(int argc, char *argv[]) {
     if (argc != 3) {
         FAILURE_EXIT(1, "Pass 2 arguments\n");
     }
     atexit(clean_up);
     signal(SIGINT, inthandler);
     pthread_mutex_init(&clients_array_mutex, NULL);
-    unsigned short port = (unsigned short) strtoul(*argv], NULL, 10);
-    local_name = *argv];
+    unsigned short port = (unsigned short) strtoul(argv[1], NULL, 10);
+    local_name = argv[2];
 
 
     // inet connection
-    inet = socket(AF_INET, SOCK_STREAM, 0);
+    inet = socket(AF_INET, SOCK_DGRAM, 0);
     struct sockaddr_in addr;
     addr.sin_family = AF_INET;
     addr.sin_port = htons(port);
     addr.sin_addr.s_addr = htonl(INADDR_ANY);
 
-    if (bind(inet, (struct sockaddr *)&(addr), sizeof(addr)) != 0) {
+    if (bind(inet, (struct sockaddr *) &(addr), sizeof(addr)) != 0) {
         FAILURE_EXIT(1, "Couldn't bind in INET.\n");
-    }
-    int listen1 = listen(inet, 8);
-    if (listen1 !=0) {
-        FAILURE_EXIT(1, "Couldn't LISTEN on INET.\n");
     }
 
     epolld = epoll_create1(0);
@@ -278,21 +280,18 @@ int main(int argc, char **argv){
     }
 
     //local connection
-    local = socket(AF_UNIX, SOCK_STREAM, 0);
+    local = socket(AF_UNIX, SOCK_DGRAM, 0);
     struct sockaddr_un address;
     address.sun_family = AF_UNIX;
     strcpy(address.sun_path, local_name);
 
-    if (bind(local, (struct sockaddr *)&(address), sizeof(address)) != 0){
+    if (bind(local, (struct sockaddr *) &(address), sizeof(address)) != 0) {
         FAILURE_EXIT(1, "Couldn't bind in LOCAL.\n");
     }
-    listen1 = listen(local, 7);
-    if (listen1 != 0) {
-        FAILURE_EXIT(1, "Couldn't LISTEN in LOCAL.\n");
-    }
+
     e.events = EPOLLIN | EPOLLET;
     e.data.fd = local;
-    if (epoll_ctl(epolld, EPOLL_CTL_ADD, local, &e) <0){
+    if (epoll_ctl(epolld, EPOLL_CTL_ADD, local, &e) < 0) {
         FAILURE_EXIT(1, "Couldn't start epoll for LOCAL.\n");
     }
 
@@ -301,7 +300,6 @@ int main(int argc, char **argv){
 
     pthread_t pinger_thread;
     pthread_create(&pinger_thread, NULL, ping, NULL);
-
 
 
     main_process_function();
